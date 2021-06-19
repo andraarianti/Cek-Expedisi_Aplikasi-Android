@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="RAJA ONGKIR"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title2"
+        android:layout_below="@+id/tv_title1"
+        android:layout_centerHorizontal="true"
+        android:text="Aplikasi Cek Ongkir"
+        android:textSize="10pt"
+        />
+
+    <!--form cek ongkir-->
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:layout_below="@+id/tv_title2"
+        android:orientation="vertical"
+        android:background="@drawable/btngradient">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input">
+
+            <TextView
+                android:id="@+id/tv_kotaAsal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kota Asal"
+                />
+
+            <Spinner
+                android:layout_below="@id/tv_kotaAsal"
+                android:id="@+id/sp_kotaAsal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input">
+
+            <TextView
+                android:id="@+id/tv_kotaTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kota Tujuan"
+                />
+
+            <Spinner
+                android:layout_below="@id/tv_kotaTujuan"
+                android:id="@+id/sp_kotaTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input">
+
+            <TextView
+                android:id="@+id/tv_Expedisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expedisi"
+                />
+
+            <Spinner
+                android:layout_below="@id/tv_Expedisi"
+                android:id="@+id/sp_Expedisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input">
+
+            <TextView
+                android:id="@+id/tv_Weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estimasi Berat Barang"
+                />
+
+            <EditText
+                android:layout_below="@id/tv_Weight"
+                android:id="@+id/et_Weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Berat (gr)"
+                android:inputType="numberDecimal"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_submit"
+        android:layout_below="@id/form"
+        android:layout_marginTop="10dp"
+        android:text="Cek Ongkir"
+        android:background="@drawable/btngradient"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu" />
+
+</RelativeLayout>

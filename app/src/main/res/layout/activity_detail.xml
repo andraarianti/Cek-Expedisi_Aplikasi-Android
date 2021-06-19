@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detail Ongkir"
+        android:textSize="25dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:layout_below="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/btngradient">
+
+            <TextView
+                android:id="@+id/tv_kota1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kota Asal"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDetail_kotaAsal"
+                android:layout_below="@+id/tv_kota1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Solo"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/btngradient">
+
+            <TextView
+                android:id="@+id/tv_kota2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kota Tujuan"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDetail_kotaTujuan"
+                android:layout_below="@+id/tv_kota2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yogyakarta"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/btngradient">
+
+            <TextView
+                android:id="@+id/tv_expedisi1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expedisi"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDetail_expedisi"
+                android:layout_below="@+id/tv_expedisi1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JNE"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/btngradient">
+
+            <TextView
+                android:id="@+id/tv_weight1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estimasi Berat Paket"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDetail_weight"
+                android:layout_below="@+id/tv_weight1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detail1"
+        android:layout_below="@id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga Ongkir"
+        android:textSize="20dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/detail1"
+        android:id="@+id/rvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/list_item_ongkir"/>
+
+</RelativeLayout>
